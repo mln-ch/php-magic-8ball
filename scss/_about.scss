@@ -1,0 +1,42 @@
+.about {
+    padding-top: 160px;
+
+    .initial {
+        display: block;
+        height: auto;
+    }
+
+    .text {
+        p {
+            font-family: 'Josefin Slab', serif;
+            letter-spacing: 1px;
+        }
+        p + p {
+            margin-top: 15px;
+        }
+
+        p:last-of-type {
+            font-size: 1.3rem;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social {
+            margin-top: 60px;
+            text-align: center;
+
+            .network {
+                font-size: 3rem;
+                @include ease;
+
+                &:hover {
+                    text-shadow: 0 0 5px rgba(255, 255, 255, .5);
+                }
+            }
+
+            .network + .network {
+                margin-left: 60px;
+            }
+        }
+    }
+}

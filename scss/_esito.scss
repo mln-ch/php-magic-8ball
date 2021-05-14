@@ -1,0 +1,70 @@
+.esito {
+  padding-top: 15px;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #222;
+    @include ease;
+
+    &:hover {
+      background: #333;
+    }
+  }
+
+  .void {
+    padding-top: 0 !important;
+    @include FlexCenter;
+    transition: 0.3s ease;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      width: inherit;
+      height: inherit;
+      animation: core 2s infinite;
+
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#87e0fd+0,53cbf1+40,05abe0+100&0.15+0,0.05+100;Blue+3D+%23+16 */
+      background: -moz-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(135, 224, 253, 0.15) 0%,
+        rgba(83, 203, 241, 0.11) 40%,
+        rgba(5, 171, 224, 0.05) 100%
+      ); /* FF3.6-15 */
+      background: -webkit-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(135, 224, 253, 0.15) 0%,
+        rgba(83, 203, 241, 0.11) 40%,
+        rgba(5, 171, 224, 0.05) 100%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(
+        ellipse at center,
+        rgba(135, 224, 253, 0.15) 0%,
+        rgba(83, 203, 241, 0.11) 40%,
+        rgba(5, 171, 224, 0.05) 100%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    
+    .slideDown {
+      display: inline-block;
+      z-index: 11;
+      font-size: 1.5rem;
+      font-family: "Josefin Slab", serif;
+
+      animation: slideIn 2s initial ease-out;
+    }
+  }
+}
